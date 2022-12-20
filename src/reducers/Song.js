@@ -23,6 +23,12 @@ const SongListReducer = (state = initialState, action) => {
           },
         ],
       };
+    case `DELETESONG`:
+      const trackId = action.payload;
+      return {
+        ...state,
+        track: state.track.filter((track) => track.id !== trackId),
+      };
     default:
       return state;
   }
