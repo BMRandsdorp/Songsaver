@@ -4,3 +4,10 @@ export const addSong = (title, artist, genre, rating) => {
     payload: { title, artist, genre, rating },
   };
 };
+
+export const delSong = (id) => {
+  return {
+    type: `DELETESONG`,
+    payload: id,
+  };
+};
